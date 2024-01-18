@@ -14,14 +14,15 @@
     "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^5.0.1",
     "styled-components": "^5.1.0",
     "typescript": "^3.7.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -42,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@playwright/test": "^1.41.0",
     "@types/styled-components": "^5.0.1"
   }
 }
